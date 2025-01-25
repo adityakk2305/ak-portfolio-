@@ -1,0 +1,105 @@
+/* General body styling */
+body {
+    font-family: 'Roboto', sans-serif; /* Clean and modern font */
+    margin: 0;
+    padding: 0;
+    background-color: #1c1b29; /* Dark theme for elegance */
+    color: #ffffff; /* White text for contrast */
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: transparent; /* Make the navbar transparent */
+    padding: 1rem;
+    box-shadow: none; /* Remove the shadow */
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+/* Add transparency to navbar background while keeping text and logo visible */
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #a259ff, #ff8c00); /* Gradient logo */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Text gradient effect */
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Spaced-out for style */
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-brand:hover {
+    opacity: 0.8; /* Slight fade effect */
+}
+
+/* Center nav-items */
+.navbar-nav {
+    margin: 0 auto;
+}
+
+/* Nav-item styling */
+.nav-link {
+    color: #ffffff; /* White text by default */
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px; /* Modern spacing */
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ff8c00; /* Orange highlight */
+}
+
+/* Hover animation underlines for nav-links */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: #a259ff; /* Purple underline */
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Button styling */
+.btn {
+    color: #ffffff;
+    background-color: #a259ff; /* Purple button */
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 30px; /* Rounded edges */
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(162, 89, 255, 0.5); /* Glow effect */
+}
+
+.btn:hover {
+    background-color: #ff8c00; /* Orange on hover */
+    box-shadow: 0 4px 15px rgba(255, 140, 0, 0.5); /* Orange glow */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav-link {
+        font-size: 1rem;
+        margin: 0 8px;
+    }
+    .btn {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+
+
